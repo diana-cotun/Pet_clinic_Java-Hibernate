@@ -1,0 +1,36 @@
+Pet Clinic management system
+
+The application will have 4 major flows and several functionalities on each:
+    1) For Vets: they should be able to:
+        Register within the system (add new vet);
+            Vets should have a unique badge id (4 digits generated randomly);
+        View all registered vets;
+        Edit their details (update a vet);
+        Remove a vet based on their badge id (delete);
+        Add holidays: any vet should be able to add specific dates as “holidays”. They will not be available
+        for consults when on holiday.
+    2) For Owners: they should be able to:
+        Register as a pet owner (add new owner);
+            Each owner should have a unique phone number;
+        View all owners;
+        Edit owner’s details (update);
+        Remove owners based on phone number (delete);
+    3) For Pets:
+        Register a pet (add new pet);
+            Pets should only be allowed if they are linked to an existing owner;
+            Pets should have a unique collar id (4 letters generated randomly);
+        View all pets and the names of their owners, respectively;
+        Edit pet details;
+        Remove pet based on collar id;
+    4) For Consults:
+        Schedule a consult
+            The user should be able to pick a vet, a date, and a time for the consultation.
+            All consultations take a standard of 30 minutes and should not be set in the past.
+            No consults should be added on non-working days (when the selected vet is on holiday).
+        Perform a consult
+            Based on the vet’s unique identifier, the date, and the time of the consult, a scheduled consult
+            should be identified. We can then add details on the vet’s findings
+
+// entitate noua Holiday cu fild veterinar oneToMany  holiday(zile calendaristeice) ManyToMeny vet(veterinarii)
+// validator data din dateTime nu se afla in tabelul Holidai al vet-ului;
+// data din DB
